@@ -13,3 +13,14 @@ dados = [
     ["Guardanapos", "200 unidades", "Bom"]
 ]
 
+tabela.setStyle(
+    TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), colors.brown),
+        ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+        ("GRID", (0, 0), (-1, -1), 1, colors.black)
+    ])
+)
+pdf.build([tabela])
+
+print("PDF gerado")
