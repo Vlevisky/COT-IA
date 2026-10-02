@@ -1,5 +1,5 @@
 from reportlab.lib.pagesizes import A4
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
 from reportlab.lib import colors
 
 pdf = SimpleDocTemplate("relatorio.pdf", pagesize=A4)
@@ -12,7 +12,7 @@ dados = [
     ["Copos", "150 unidades", "Bom"],
     ["Guardanapos", "200 unidades", "Bom"]
 ]
-
+tabela = Table(dados)
 tabela.setStyle(
     TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), colors.brown),
